@@ -1,0 +1,38 @@
+<div class="container">
+	<h1>Perfil Component</h1>
+	
+	<div class="row">
+		
+		<div class="col-lg-2">
+			<strong>Usuario</strong>
+		</div>
+
+		<div class="col-lg-10">
+			<div class="card">
+				<div class="card-header">
+					Escribe tu mensaje...
+				</div>
+				<div class="card-body">
+					<textarea #publicacion cols="30" rows="5" class="form-control" placeholder="¿En qué piensas?"></textarea>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-primary">Publicar</button>
+				</div>
+			</div>
+
+			<div class="card" *ngFor="let publicacion of listaPublicaciones">
+				<div class="card-header">
+					<h3>{{ publicacion.title }}</h3>
+				</div>
+				<div class="card-body">
+					{{ publicacion.body }}
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-link social" (click)="darLike(publicacion.title)">Like</button>
+					<button class="btn btn-link social" href="">Comentar</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
