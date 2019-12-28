@@ -16,7 +16,7 @@
 					<textarea #publicacion cols="30" rows="5" class="form-control" placeholder="¿En qué piensas?"></textarea>
 				</div>
 				<div class="card-footer">
-					<button class="btn btn-primary">Publicar</button>
+					<button class="btn btn-primary" (click)="publicarPost(publicacion.value)">Publicar</button>
 				</div>
 			</div>
 
